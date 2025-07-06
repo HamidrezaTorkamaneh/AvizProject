@@ -8,4 +8,5 @@ class CustomColor {
   static const Color lightGrey = Color(0xffD0D5DD);
   static const Color lightGrey1 = Color(0xffF2F4F7);
   static const Color gery = Color(0xffD0D5DD);
+  
 }

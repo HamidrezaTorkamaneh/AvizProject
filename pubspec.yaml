@@ -12,7 +12,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  flutter_svg: ^2.0.10+1
   dartz: 0.10.1 
   dio: ^5.1.2
   get_it: 7.2.0

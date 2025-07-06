@@ -3,6 +3,7 @@ import 'package:aviz/Features/Home/bloc/bloc/home_bloc.dart';
 import 'package:aviz/Widgets/hot_promotion_card.dart';
 import 'package:aviz/Widgets/normal_promotion_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -33,6 +34,12 @@ class ViewContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.white,
+      statusBarIconBrightness: Brightness.dark,
+      systemNavigationBarColor: Colors.white,
+      systemNavigationBarIconBrightness: Brightness.dark,
+    ));
     return BlocBuilder<HomeBloc, HomeState>(builder: ((context, state) {
       return Scaffold(
         backgroundColor: Colors.white,

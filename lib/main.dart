@@ -1,8 +1,7 @@
 import 'package:aviz/Constants/color_constants.dart';
 import 'package:aviz/DI/di.dart';
+import 'package:aviz/Features/Category/view/category_screen.dart';
 import 'package:aviz/Features/Home/view/home_screen.dart';
-import 'package:aviz/Features/Search/view/search_screen.dart';
-import 'package:aviz/source/home_source/home_raw.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
@@ -17,11 +16,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-
       theme: ThemeData(
           textTheme: TextTheme(
               bodyMedium: const TextStyle(
-                  fontSize: 16,
+                  fontSize: 14,
                   fontFamily: 'dana',
                   fontWeight: FontWeight.bold,
                   color: Color(0xff101828)),
@@ -36,7 +34,7 @@ class MyApp extends StatelessWidget {
                 fontFamily: 'dana',
                 fontWeight: FontWeight.bold,
               ))),
-      home: HomeScreen(),
+      home: CategoryScreen(),
     );
   }
 }
