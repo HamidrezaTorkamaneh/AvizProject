@@ -1,4 +1,5 @@
 import 'package:aviz/DI/di.dart';
+import 'package:aviz/Features/DetailPromotion/view/detail_promotion_screen.dart';
 import 'package:aviz/Features/Home/bloc/bloc/home_bloc.dart';
 import 'package:aviz/Widgets/hot_promotion_card.dart';
 import 'package:aviz/Widgets/normal_promotion_card.dart';
@@ -106,6 +107,11 @@ class ViewContainer extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 10, vertical: 20),
                             child: GestureDetector(
+                              onTap: (){
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => DetailPromotionScreen(
+                                        promotionList[index])));
+                              },
                               child: HotPromotionCard(promotionList[index]),
                             ),
                           );
@@ -164,6 +170,9 @@ class ViewContainer extends StatelessWidget {
                       (context, index) => Padding(
                         padding: const EdgeInsets.all(10),
                         child: GestureDetector(
+                          onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context)=> DetailPromotionScreen( latestPromotions[index])));
+                          },  
                           child: NormalPromotionCard(latestPromotions[index]),
                         ),
                       ),
