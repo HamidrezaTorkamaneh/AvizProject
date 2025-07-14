@@ -3,6 +3,7 @@ import 'package:aviz/DI/di.dart';
 import 'package:aviz/Features/Category/view/category_screen.dart';
 import 'package:aviz/Features/DetailPromotion/view/detail_promotion_screen.dart';
 import 'package:aviz/Features/Home/view/home_screen.dart';
+import 'package:aviz/Features/Profile/view/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: HomeScreen(),
+      home: ProfileScreen(),
     );
   }
 }

@@ -23,7 +23,7 @@ class DetailPromotionScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Directionality(
             textDirection: TextDirection.rtl,
             child: Stack(
@@ -37,6 +37,7 @@ class DetailPromotionScreen extends StatelessWidget {
                       centerTitle: true,
                       backgroundColor: Colors.transparent,
                       leading: Icon(Icons.arrow_back_ios),
+                    
                       actions: [
                         CustomIcons(
                             icon: 'information', color: Colors.black, size: 24),
