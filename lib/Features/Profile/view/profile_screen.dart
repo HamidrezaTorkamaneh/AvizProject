@@ -139,6 +139,42 @@ class ProfileScreen extends StatelessWidget {
                       height: 40,
                     ),
                   ),
+                ),
+                SliverToBoxAdapter(child: SizedBox(height: 30)),
+                SliverToBoxAdapter(
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                    height: 45,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      border: Border.all(
+                        width: 1,
+                        color: CustomColor.lightGrey1,
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        CustomIcons(
+                            icon: 'save',
+                            color: CustomColor.customRed,
+                            size: 22),
+                        SizedBox(width: 10),
+                        Text('آگهی های من',
+                            style: Theme.of(context)
+                                .textTheme
+                                .labelMedium!
+                                .copyWith(
+                                  color: Colors.black,
+                                )),
+                        Spacer(),
+                        CustomIcons(
+                            icon: 'arrow_forward',
+                            color: CustomColor.lightGrey1,
+                            size: 22)
+                      ],
+                    ),
+                  ),
                 )
               ],
             ),
