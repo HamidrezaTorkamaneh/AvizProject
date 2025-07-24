@@ -15,6 +15,8 @@ var locator = GetIt.instance;
 Future<void> getInInit() async {
   locator.registerSingleton<Dio>(DioProvider.createDio());
 
+  //Datasource
+
   locator.registerFactory<IHomeDatasource>(
       () => HomeRemoteDatasource(locator.get()));
 
@@ -26,6 +28,8 @@ Future<void> getInInit() async {
 
   locator.registerFactory<IProfileDatasource>(
       () => ProfileRemoteDatasource(locator.get()));
+
+  //Repository
 
   locator.registerFactory<IHomeRepository>(() => HomeRepository(locator.get()));
 
